@@ -1,14 +1,50 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "jsxImportSource": "vue",
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "preserve",
+    "noImplicitAny": false,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@r/*": ["src/router/*"],
+      "@v/*": ["src/views/*"],
+      "@s/*": ["src/settings/*"],
+      "@c/*": ["src/components/*"],
+      "@u/*": ["src/utils/*"],
+      "@http/*": ["src/utils/http/axios/*"],
+      "@service/*": ["src/service/*"],
+      "@h/*": ["src/hooks/*"],
+      "@e/*": ["src/enums/*"],
+      "@store/*": ["src/store/*"],
+      "#/*": ["src/types/*"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": [
+    "src/**/*.ts", 
+    "src/**/*.tsx", 
+    "src/**/*.vue", 
+    "packages/**/*.ts", 
+    "*.d.ts",
+    "types/**/*.d.ts", 
+    "types/**/*.ts",
+    "mock/**/*.ts"
+  ]
 }

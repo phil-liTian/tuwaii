@@ -1,7 +1,15 @@
 import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
+import { setupRouter } from './router';
+import './design/index.less';
 
-createApp(App).mount('#app');
+const app = createApp(App);
 
-var a = '1231';
+const bootStrap = async () => {
+	setupRouter(app);
+
+	app.mount('#app');
+};
+
+bootStrap();

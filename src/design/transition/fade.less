@@ -1,0 +1,112 @@
+// ////////////////////////////
+// fade-scale
+// ////////////////////////////
+.fade-scale {
+  &-enter-form {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+
+  &-leave-to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: all .28s;
+  }
+}
+
+// ////////////////////////////
+// fade-slide
+// ////////////////////////////
+.fade-slide {
+  &-enter-form {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  &-leave-to {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: all .3s;
+  }
+}
+
+// ////////////////////////////
+// fade-top
+// ////////////////////////////
+.fade-top {
+  &-enter-form {
+    transform: translateY(8%);
+    opacity: 0;
+  }
+
+  &-leave-to {
+    transform: translateY(-8%);
+    opacity: 0;
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: all .3s;
+  }
+}
+
+// ////////////////////////////
+// fade-bottom
+// ////////////////////////////
+.fade-bottom {
+  &-enter-form {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+
+  &-leave-to {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: all .3s;
+  }
+}
+
+// 淡入淡出
+.fade-transition {
+  &-enter-active,
+  &-leave-active {
+    transition: opacity .2s ease-in-out;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
+  }
+}
+
+// 缩放
+.scale-transition {
+  &-enter-active,
+  &-leave-active {
+    transition: all .28s;
+  }
+
+  &-enter-from {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+
+  &-leave-to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+

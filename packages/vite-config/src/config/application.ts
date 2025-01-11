@@ -11,6 +11,7 @@ function defineApplicationConfig(defineConfigs: DefineConfig = {}) {
 	const { overrides } = defineConfigs;
 	return defineConfig(({ command, mode }) => {
 		const root = process.cwd();
+
 		const isBuild = command === 'build';
 		const { VITE_PUBLIC_PATH, VITE_USE_MOCK } = loadEnv(mode, root);
 
@@ -58,7 +59,15 @@ function defineApplicationConfig(defineConfigs: DefineConfig = {}) {
 			css: {
 				preprocessorOptions: {
 					less: {
-						javascriptEnabled: true
+						javascriptEnabled: true,
+						modifyVars: {
+							hack: `true; @import (reference) "${resolve(
+								root,
+								'src/design/index.less'
+							)}";`
+							// 'primary-color': '#0960bd',
+							// ...generateModifyVars(),
+						}
 					}
 				}
 			}

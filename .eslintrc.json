@@ -15,7 +15,7 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": ["prettier"],
+	"plugins": ["prettier", "vue"],
 	"rules": {
 		"prettier/prettier": "error",
 		"no-case-declarations": "off",
