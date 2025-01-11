@@ -5,8 +5,7 @@ export { asyncRoutes };
 
 export const router = createRouter({
 	history: createWebHistory(),
-	// @ts-ignore
-	routes: asyncRoutes as AppRouteRecordRaw[]
+	routes: asyncRoutes as any
 });
 
 export const setupRouter = (app: App) => {

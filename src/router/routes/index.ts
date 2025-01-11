@@ -1,6 +1,7 @@
 import { AppRouteRecordRaw } from '../types';
 
 const modules = import.meta.glob('./modules/**/*.ts', { eager: true });
+type Recordable<T = any> = Record<string, T>;
 
 let routeModuleList: AppRouteRecordRaw[] = [];
 Object.keys(modules).forEach((key) => {

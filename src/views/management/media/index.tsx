@@ -1,7 +1,7 @@
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  setup() {
-    return () => <div>媒体管理</div>;
-  }
-})
+	setup() {
+		return () => <div>媒体管理</div>;
+	}
+});
