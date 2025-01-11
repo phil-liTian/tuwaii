@@ -2,7 +2,7 @@
   "name": "tuwaii",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "start": "npm run dev",
     "lint": "eslint --ext .ts,.jsx,.tsx --fix ./src",
@@ -14,8 +14,10 @@
   "dependencies": {
     "@ant-design/icons-vue": "^7.0.1",
     "@phil/vite-config": "workspace:*",
+    "@phil/http": "workspace:*",
     "@vueuse/core": "^12.4.0",
     "ant-design-vue": "^4.2.6",
+    "axios": "^1.7.9",
     "eslint-plugin-vue": "^9.32.0",
     "lodash": "^4.17.21",
     "vue": "^3.5.13",
@@ -32,6 +34,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.7",
     "less": "^4.2.1",
+    "lodash-es": "^4.17.21",
     "prettier": "^3.4.2",
     "typescript": "~5.6.2",
     "vite": "^6.0.5",
