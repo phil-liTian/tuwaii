@@ -1,7 +1,20 @@
 import { defineComponent } from 'vue';
+import { MediaColumns } from './data.config';
 
 export default defineComponent({
 	setup() {
-		return () => <div>媒体管理</div>;
+		const handleAdd = () => {
+			console.log('add');
+		};
+		return () => {
+			return (
+				<tw-table
+					canAdd
+					columns={MediaColumns}
+					dataSource={[{}]}
+					onAdd={handleAdd}
+				/>
+			);
+		};
 	}
 });

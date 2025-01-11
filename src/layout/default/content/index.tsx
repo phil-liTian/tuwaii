@@ -5,7 +5,7 @@ import PageLayout from '../../page/index.vue';
 export default defineComponent({
 	setup() {
 		return () => (
-			<LayoutContent>
+			<LayoutContent style={{ margin: '10px', background: '#fff' }}>
 				<PageLayout />
 			</LayoutContent>
 		);

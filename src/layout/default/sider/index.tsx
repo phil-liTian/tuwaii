@@ -7,7 +7,6 @@ export default defineComponent({
 	setup() {
 		const { go } = useGo();
 		const menus = transformRouteToMenu() as any[];
-
 		const handleMenuClick = ({ key }) => {
 			go(key);
 		};
